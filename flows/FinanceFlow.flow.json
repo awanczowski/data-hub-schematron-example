@@ -1,0 +1,19 @@
+{
+  "name": "FinanceFlow",
+  "steps": {
+    "1": {
+      "stepId": "LoadOrganization-ingestion"
+    },
+    "2": {
+      "stepId": "MapOrganization-mapping"
+    },
+    "3": {
+      "stepId": "LoadInvoices-ingestion"
+    },
+    "4": {
+      "stepId": "MapInvoice-mapping"
+    }
+  },
+  "lastUpdated": "2022-08-03T11:13:14.327554-04:00",
+  "description": ""
+}

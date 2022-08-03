@@ -1,0 +1,89 @@
+{
+  "collections": [
+    "MapInvoice",
+    "Invoice"
+  ],
+  "additionalCollections": [ ],
+  "permissions": "data-hub-common,read,data-hub-common,update",
+  "batchSize": 100,
+  "validateEntity": "doNotValidate",
+  "targetFormat": "JSON",
+  "attachSourceDocument": false,
+  "sourceRecordScope": "instanceOnly",
+  "name": "MapInvoice",
+  "targetEntityType": "http://example.org/Invoice-1.0.0/Invoice",
+  "description": "",
+  "collection": [
+    "LoadInvoices"
+  ],
+  "selectedSource": "collection",
+  "sourceQuery": "cts.collectionQuery(['LoadInvoices'])",
+  "targetDatabase": "data-hub-FINAL",
+  "headers": { },
+  "interceptors": [
+    {
+      "path": "/custom-modules/custom/step-interceptors/SchematronValidation.sjs",
+      "when": "beforeContentPersisted",
+      "vars": {
+        "sch": "/schematron/invoice.sch"
+      }
+    }
+  ],
+  "provenanceGranularityLevel": "coarse",
+  "customHook": { },
+  "sourceDatabase": "data-hub-STAGING",
+  "stepDefinitionName": "entity-services-mapping",
+  "stepDefinitionType": "mapping",
+  "stepId": "MapInvoice-mapping",
+  "acceptsBatch": true,
+  "lastUpdated": "2022-08-03T11:13:14.939779-04:00",
+  "uriExpression": "$URI",
+  "properties": {
+    "id": {
+      "sourcedFrom": "id"
+    },
+    "organization": {
+      "sourcedFrom": "invoiced_id"
+    },
+    "provider": {
+      "sourcedFrom": "provider_id"
+    },
+    "total": {
+      "sourcedFrom": "total"
+    },
+    "items": {
+      "sourcedFrom": "line_items",
+      "properties": {
+        "lineNumber": {
+          "sourcedFrom": "number"
+        },
+        "product": {
+          "sourcedFrom": "product"
+        },
+        "amount": {
+          "sourcedFrom": "amount"
+        },
+        "quantity": {
+          "sourcedFrom": "quantity"
+        },
+        "total": {
+          "sourcedFrom": "total"
+        },
+        "category": {
+          "sourcedFrom": "category"
+        },
+        "unitPrice": {
+          "sourcedFrom": "amount"
+        },
+        "unitTotal": {
+          "sourcedFrom": "total"
+        },
+        "invoiceId": {
+          "sourcedFrom": "/id"
+        }
+      },
+      "targetEntityType": "#/definitions/LineItem"
+    }
+  },
+  "namespaces": { }
+}

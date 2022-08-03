@@ -1,0 +1,33 @@
+{
+    "id": "8e9352b4-3716-4d5a-a55c-2b09bedf0e8d",
+    "service_date": "2021-11-10T04:05:10Z",
+    "provider_id": "62a9ffbf-5024-450f-8653-0563a32e3ae9",
+    "invoiced_id": "aee31ee7-5a78-4686-bd8e-fefba5ea697e",
+    "line_items": [
+        {
+            "number": 1,
+            "product": "PVC",
+            "category": "Plastic",
+            "quantity": 39,
+            "amount": 7482.97,
+            "total": 291835.83
+        },
+        {
+            "number": 2,
+            "product": "Plexiglass",
+            "category": "Glass",
+            "quantity": 35,
+            "amount": 2150.45,
+            "total": 75265.75
+        },
+        {
+            "number": 3,
+            "product": "Brass",
+            "category": "Metal",
+            "quantity": 30,
+            "amount": 3840.02,
+            "total": 115200.6
+        }
+    ],
+    "total": 482302.18
+}

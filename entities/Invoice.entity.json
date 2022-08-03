@@ -1,0 +1,91 @@
+{
+  "info": {
+    "title": "Invoice",
+    "draft": false,
+    "version": "1.0.0",
+    "baseUri": "http://example.org/"
+  },
+  "definitions": {
+    "Invoice": {
+      "properties": {
+        "id": {
+          "datatype": "string",
+          "facetable": false,
+          "sortable": false,
+          "collation": "http://marklogic.com/collation/codepoint"
+        },
+        "organization": {
+          "datatype": "string",
+          "relatedEntityType": "http://example.org/Organization-1.0.0/Organization",
+          "joinPropertyName": "id"
+        },
+        "provider": {
+          "datatype": "string",
+          "relatedEntityType": "http://example.org/Organization-1.0.0/Organization",
+          "joinPropertyName": "id"
+        },
+        "total": {
+          "datatype": "double",
+          "facetable": false,
+          "sortable": false,
+          "collation": "http://marklogic.com/collation/codepoint"
+        },
+        "items": {
+          "datatype": "array",
+          "facetable": false,
+          "sortable": false,
+          "items": {
+            "$ref": "#/definitions/LineItem"
+          }
+        }
+      },
+      "primaryKey": "id"
+    },
+    "LineItem": {
+      "properties": {
+        "lineNumber": {
+          "datatype": "integer",
+          "facetable": false,
+          "sortable": false,
+          "collation": "http://marklogic.com/collation/codepoint"
+        },
+        "product": {
+          "datatype": "string",
+          "facetable": false,
+          "sortable": false,
+          "collation": "http://marklogic.com/collation/codepoint"
+        },
+        "category": {
+          "datatype": "string",
+          "facetable": false,
+          "sortable": false,
+          "collation": "http://marklogic.com/collation/codepoint"
+        },
+        "unitPrice": {
+          "datatype": "decimal",
+          "facetable": false,
+          "sortable": false,
+          "collation": "http://marklogic.com/collation/codepoint"
+        },
+        "quantity": {
+          "datatype": "integer",
+          "facetable": false,
+          "sortable": false,
+          "collation": "http://marklogic.com/collation/codepoint"
+        },
+        "unitTotal": {
+          "datatype": "decimal",
+          "facetable": false,
+          "sortable": false,
+          "collation": "http://marklogic.com/collation/codepoint"
+        },
+        "invoiceId": {
+          "datatype": "string",
+          "facetable": false,
+          "sortable": false,
+          "collation": "http://marklogic.com/collation/codepoint"
+        }
+      }
+    }
+  }
+}

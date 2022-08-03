@@ -1,0 +1,33 @@
+{
+    "id": "066f4e4d-eea1-4171-8ba3-d384976b56cb",
+    "service_date": "2022-01-04T18:58:36Z",
+    "provider_id": "62a9ffbf-5024-450f-8653-0563a32e3ae9",
+    "invoiced_id": "aee31ee7-5a78-4686-bd8e-fefba5ea697e",
+    "line_items": [
+        {
+            "number": 1,
+            "product": "Sheet Glass",
+            "category": "Glass",
+            "quantity": 19,
+            "amount": 1162.81,
+            "total": 22093.39
+        },
+        {
+            "number": 2,
+            "product": "Granite",
+            "category": "Stone",
+            "quantity": 2,
+            "amount": 2909.82,
+            "total": 5819.64
+        },
+        {
+            "number": 3,
+            "product": "Plexiglass",
+            "category": "Glass",
+            "quantity": 38,
+            "amount": 9237.58,
+            "total": 351028.04
+        }
+    ],
+    "total": 797475.61
+}

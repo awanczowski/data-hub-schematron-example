@@ -1,0 +1,41 @@
+{
+    "id": "545a1411-07a7-474f-b033-6e62b6787a2c",
+    "service_date": "2021-07-19T09:47:17Z",
+    "provider_id": "62a9ffbf-5024-450f-8653-0563a32e3ae9",
+    "invoiced_id": "aee31ee7-5a78-4686-bd8e-fefba5ea697e",
+    "line_items": [
+        {
+            "number": 1,
+            "product": "Steel",
+            "category": "Metal",
+            "quantity": 7,
+            "amount": 3731.21,
+            "total": 26118.47
+        },
+        {
+            "number": 2,
+            "product": "Rubber Mat",
+            "category": "Rubber",
+            "quantity": 13,
+            "amount": 7385.06,
+            "total": 96005.78
+        },
+        {
+            "number": 3,
+            "product": "Aluminum",
+            "category": "Metal",
+            "quantity": 86,
+            "amount": 4288.13,
+            "total": 368779.18
+        },
+        {
+            "number": 4,
+            "product": "Plexiglass",
+            "category": "Glass",
+            "quantity": 27,
+            "amount": 9625.18,
+            "total": 259879.86
+        }
+    ],
+    "total": 750783.29
+}

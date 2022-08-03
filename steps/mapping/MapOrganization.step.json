@@ -1,0 +1,70 @@
+{
+  "collections": [
+    "MapOrganization",
+    "Organization"
+  ],
+  "additionalCollections": [ ],
+  "permissions": "data-hub-common,read,data-hub-common,update",
+  "batchSize": 100,
+  "validateEntity": "doNotValidate",
+  "targetFormat": "XML",
+  "attachSourceDocument": false,
+  "sourceRecordScope": "instanceOnly",
+  "name": "MapOrganization",
+  "targetEntityType": "http://example.org/Organization-1.0.0/Organization",
+  "description": "",
+  "collection": [
+    "LoadOrganization"
+  ],
+  "selectedSource": "collection",
+  "sourceQuery": "cts.collectionQuery(['LoadOrganization'])",
+  "targetDatabase": "data-hub-FINAL",
+  "headers": { },
+  "interceptors": [
+    {
+      "path": "/custom-modules/custom/step-interceptors/SchematronValidation.sjs",
+      "when": "beforeContentPersisted",
+      "vars": {
+        "sch": "/schematron/organization.sch"
+      }
+    }
+  ],
+  "provenanceGranularityLevel": "off",
+  "customHook": { },
+  "sourceDatabase": "data-hub-STAGING",
+  "stepDefinitionName": "entity-services-mapping",
+  "stepDefinitionType": "mapping",
+  "stepId": "MapOrganization-mapping",
+  "acceptsBatch": true,
+  "lastUpdated": "2022-08-03T11:13:14.609189-04:00",
+  "properties": {
+    "id": {
+      "sourcedFrom": "organization/id"
+    },
+    "fullName": {
+      "sourcedFrom": "organization/name"
+    },
+    "headquarters": {
+      "sourcedFrom": "organization/address",
+      "properties": {
+        "streetAddress": {
+          "sourcedFrom": "street"
+        },
+        "city": {
+          "sourcedFrom": "city"
+        },
+        "state": {
+          "sourcedFrom": "state"
+        },
+        "zipCode": {
+          "sourcedFrom": "zip"
+        }
+      },
+      "targetEntityType": "#/definitions/Address"
+    }
+  },
+  "namespaces": {
+    "entity-services": "http://marklogic.com/entity-services"
+  },
+  "uriExpression": "$URI"
+}

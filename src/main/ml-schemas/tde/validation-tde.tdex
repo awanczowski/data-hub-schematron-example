@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tde:template xml:lang="zxx"
+    xmlns:tde="http://marklogic.com/xdmp/tde">
+    <tde:description></tde:description>
+    <tde:context>/(es:envelope|envelope)/(es:headers|headers)/validation/schematron</tde:context>
+
+    <tde:path-namespaces>
+        <tde:path-namespace>
+            <tde:prefix>es</tde:prefix>
+            <tde:namespace-uri>http://marklogic.com/entity-services</tde:namespace-uri>
+        </tde:path-namespace>
+    </tde:path-namespaces>
+    <tde:templates>
+
+        <tde:template>
+            <tde:context>.</tde:context>
+            <tde:rows>
+                <tde:row>
+                    <tde:schema-name>Validation</tde:schema-name>
+                    <tde:view-name>Schematron</tde:view-name>
+                    <tde:view-layout>sparse</tde:view-layout>
+                    <tde:columns>
+                        <tde:column>
+                            <tde:name>uri</tde:name>
+                            <tde:scalar-type>string</tde:scalar-type>
+                            <tde:val>xdmp:node-uri(.)</tde:val>
+                            <tde:nullable>true</tde:nullable>
+                            <tde:invalid-values>ignore</tde:invalid-values>
+                        </tde:column>
+                        <tde:column>
+                            <tde:name>file</tde:name>
+                            <tde:scalar-type>string</tde:scalar-type>
+                            <tde:val>file</tde:val>
+                            <tde:nullable>true</tde:nullable>
+                            <tde:invalid-values>ignore</tde:invalid-values>
+                        </tde:column>
+                        <tde:column>
+                            <tde:name>diagnostic</tde:name>
+                            <tde:scalar-type>string</tde:scalar-type>
+                            <tde:val>diagnostic</tde:val>
+                            <tde:nullable>true</tde:nullable>
+                            <tde:invalid-values>ignore</tde:invalid-values>
+                        </tde:column>
+                        <tde:column>
+                            <tde:name>text</tde:name>
+                            <tde:scalar-type>string</tde:scalar-type>
+                            <tde:val>text</tde:val>
+                            <tde:nullable>true</tde:nullable>
+                            <tde:invalid-values>ignore</tde:invalid-values>
+                        </tde:column>
+                    </tde:columns>
+                </tde:row>
+            </tde:rows>
+        </tde:template>
+
+    </tde:templates>
+</tde:template>

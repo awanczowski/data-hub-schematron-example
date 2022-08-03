@@ -1,0 +1,24 @@
+{
+  "headers": { },
+  "collections": [
+    "LoadInvoices"
+  ],
+  "permissions": "data-hub-common,read,data-hub-common,update",
+  "batchSize": 100,
+  "name": "LoadInvoices",
+  "description": "",
+  "sourceFormat": "json",
+  "targetFormat": "json",
+  "sourceName": "Financials",
+  "sourceType": "ERP",
+  "outputURIPrefix": "/data/invoices/",
+  "additionalCollections": [ ],
+  "targetDatabase": "data-hub-STAGING",
+  "interceptors": [ ],
+  "provenanceGranularityLevel": "coarse",
+  "customHook": { },
+  "stepDefinitionName": "default-ingestion",
+  "stepDefinitionType": "ingestion",
+  "stepId": "LoadInvoices-ingestion",
+  "lastUpdated": "2022-08-03T11:13:15.002492-04:00"
+}

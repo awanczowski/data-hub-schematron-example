@@ -1,0 +1,49 @@
+{
+    "id": "1d90adeb-cc84-41a9-83f3-395545ecc831",
+    "service_date": "2021-08-10T08:18:09Z",
+    "provider_id": "62a9ffbf-5024-450f-8653-0563a32e3ae9",
+    "invoiced_id": "aee31ee7-5a78-4686-bd8e-fefba5ea697e",
+    "line_items": [
+        {
+            "number": 1,
+            "product": "Steel",
+            "category": "Metal",
+            "quantity": 59,
+            "amount": 2880.95,
+            "total": 169976.05
+        },
+        {
+            "number": 2,
+            "product": "Aluminum",
+            "category": "Metal",
+            "quantity": 77,
+            "amount": 5014.61,
+            "total": 386124.99
+        },
+        {
+            "number": 3,
+            "product": "Cedar",
+            "category": "Wood",
+            "quantity": 7,
+            "amount": 6350.8,
+            "total": 44455.6
+        },
+        {
+            "number": 4,
+            "product": "Sheet Glass",
+            "category": "Glass",
+            "quantity": 85,
+            "amount": 277.15,
+            "total": 23557.75
+        },
+        {
+            "number": 5,
+            "product": "Plexiglass",
+            "category": "Glass",
+            "quantity": 71,
+            "amount": 6174.69,
+            "total": 438402.99
+        }
+    ],
+    "total": 1062517.36
+}

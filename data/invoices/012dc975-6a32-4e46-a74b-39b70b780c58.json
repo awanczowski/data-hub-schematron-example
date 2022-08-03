@@ -1,0 +1,25 @@
+{
+    "id": "012dc975-6a32-4e46-a74b-39b70b780c58",
+    "service_date": "2021-12-18T13:54:20Z",
+    "provider_id": "62a9ffbf-5024-450f-8653-0563a32e3ae9",
+    "invoiced_id": "aee31ee7-5a78-4686-bd8e-fefba5ea697e",
+    "line_items": [
+        {
+            "number": 1,
+            "product": "Oak",
+            "category": "Wood",
+            "quantity": 79,
+            "amount": 1130.21,
+            "total": 89286.59
+        },
+        {
+            "number": 2,
+            "product": "Granite",
+            "category": "Stone",
+            "quantity": 38,
+            "amount": 7201.22,
+            "total": 273646.36
+        }
+    ],
+    "total": 362932.95
+}
