@@ -3,12 +3,11 @@ plugins {
    id 'net.saliman.properties' version '1.4.6'
 
    // Data Hub plugin
-   id 'com.marklogic.ml-data-hub' version '5.7.2'
+   id 'com.marklogic.ml-data-hub' version '6.0.0'
 }
 
 task schematronPut(type: com.marklogic.gradle.task.ServerEvalTask) {
   dependsOn mlLoadSchemas
-
   client = hubConfig.newFinalClient()
   javascript = 'xdmp.invoke("/lib/schematron-put.sjs")'
 }
